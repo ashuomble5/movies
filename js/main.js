@@ -12,17 +12,7 @@ $(document).ready(() => {
 
 function getMovies(searchTerm) {
 	//now call the axios to get the data 
-	// axios.get('http://www.omdbapi.com?s='+searchTerm+'&apikey=3f265c45')
-	let url = 'http://www.omdbapi.com?s='+searchTerm+'&apikey=3f265c45';
-	//axios call
-	axios(url,{
-		method: 'GET',
-		 mode: 'no-cors',
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Content-Type': 'application/json',
-      },
-	})
+	axios.get('http://www.omdbapi.com?s='+searchTerm+'&apikey=3f265c45')
 		.then(response => {
 			console.log(response)
 			//get the response into variable
