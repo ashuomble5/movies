@@ -24,7 +24,7 @@ function getMovies(searchTerm) {
 				output+= `
 						<div class="column">
 							<div class="card">
-								<img alt=${movie.Title} src=${movie.Poster}>
+								<img alt='${movie.Title}' src=${movie.Poster}>
 								<div class="container">
 									<h2>${movie.Title}</h2>
 									<p class="title">${movie.Year}</p>
