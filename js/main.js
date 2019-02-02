@@ -18,16 +18,24 @@ function getMovies(searchTerm) {
 			//get the response into variable
 			const movies = response.data.Search;
 			// iterate through movies array/object
-			let output = '';
+			let output = '<div class="row">';
 
 			$.each(movies, (index, movie) => {
 				output+= `
-					<div>
-						<img alt=${movie.Title} src=${movie.Poster}>
-						${movie.Title}
-					</div>
+						<div class="column">
+							<div class="card">
+								<img alt=${movie.Title} src=${movie.Poster}>
+								<div class="container">
+									<h2>${movie.Title}</h2>
+									<p class="title">${movie.Year}</p>
+									<p><button class="button">Details</button></p>
+								</div>
+							</div>
+						</div>
 				`;
 			});
+
+			output += '</div>';
 
 			//add the output to the output div of html file
 			$("#searchResults").html(output);
