@@ -31,7 +31,7 @@ function getMovies(searchTerm) {
                     output += `
 						<div class="column">
 							<div class="card">
-								<img alt='${movie.Title}' src=${poster}>
+								<img onerror="imageError(this);" alt='${movie.Title}' src=${poster}>
 								<div class="container">
 									<h3 class="title">${movie.Title}</h3>
 									<p class="year">${movie.Year}</p>
@@ -60,4 +60,10 @@ function getMovies(searchTerm) {
 
             $("#searchResults").html(output);
         })
+}
+
+function imageError(image){
+	image.onerror = "";
+    image.src = "./css/no-image.png";
+    return true;
 }
