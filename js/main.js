@@ -26,7 +26,7 @@ function getMovies(searchTerm) {
                 output += '<div class="row">';
 
                 $.each(movies, (index, movie) => {
-                    let poster = movie.Poster === "N/A" ? '../css/no-image.png' : movie.Poster;
+                    let poster = movie.Poster === "N/A" ? './css/no-image.png' : movie.Poster;
 
                     output += `
 						<div class="column">
@@ -55,7 +55,7 @@ function getMovies(searchTerm) {
         .catch(err => {
             output += `
 		    <p>Something is wrong, Please try again.</p>
-			<img src="../css/404.png"/>
+			<img src="./css/404.png"/>
 			`;
 
             $("#searchResults").html(output);
