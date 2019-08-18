@@ -8,4 +8,4 @@ Also for making Ajax call I have used the Axios package to get sync results.
 This website is purely made on cases, html and JS/javascript
 
 
-Website URL: https://ashuomble5.github.io/movies/
+Website URL: https://evilsempire.github.io/movies/
